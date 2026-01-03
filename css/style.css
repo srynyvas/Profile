@@ -455,157 +455,86 @@ ul {
     background: var(--bg-secondary);
 }
 
-/* Impact Banner */
-.impact-banner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    padding: 40px 60px;
-    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(255, 107, 53, 0.05) 100%);
-    border-radius: 20px;
-    border: 1px solid var(--border-color);
-    margin-bottom: 60px;
-    flex-wrap: wrap;
-}
-
-.impact-item {
-    text-align: center;
-}
-
-.impact-number {
-    display: block;
-    font-size: 48px;
-    font-weight: 800;
-    color: var(--accent);
-    line-height: 1;
-    margin-bottom: 8px;
-}
-
-.impact-label {
-    font-size: 14px;
-    color: var(--text-secondary);
-    line-height: 1.4;
-}
-
-.impact-divider {
-    width: 1px;
-    height: 60px;
-    background: var(--border-color);
-}
-
-.about-content {
+.about-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.2fr 0.8fr;
     gap: 60px;
     align-items: start;
 }
 
-.about-intro {
-    font-size: 20px;
-    line-height: 1.8;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
+.about-text {
+    padding-right: 20px;
 }
 
-.about-secondary {
+.about-lead {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.about-body {
     font-size: 16px;
     line-height: 1.8;
-    color: var(--text-muted);
-    margin-bottom: 30px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
 }
 
-.about-secondary strong {
-    color: var(--text-primary);
+.about-body strong {
+    color: var(--accent);
+    font-weight: 600;
 }
 
-/* Credential Badges */
-.about-credentials {
+.about-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 10px;
+    margin-top: 30px;
 }
 
-.credential-badge {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    background: var(--bg-card);
-    border: 1px solid var(--border-color);
-    border-radius: 30px;
-    font-size: 13px;
-    color: var(--text-secondary);
-    transition: var(--transition);
-}
-
-.credential-badge:hover {
-    border-color: var(--accent);
-    color: var(--accent);
-}
-
-.credential-badge svg {
-    color: var(--accent);
-    flex-shrink: 0;
-}
-
-/* Expertise Section */
-.about-expertise {
-    background: var(--bg-card);
+.about-tag {
+    padding: 8px 16px;
+    background: rgba(255, 107, 53, 0.1);
+    border: 1px solid rgba(255, 107, 53, 0.2);
     border-radius: 20px;
-    padding: 30px;
-    border: 1px solid var(--border-color);
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 500;
 }
 
-.expertise-title {
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 24px;
-    color: var(--text-primary);
-}
-
-.expertise-grid {
+.about-stats {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.expertise-card {
-    padding: 20px;
-    background: var(--bg-secondary);
-    border-radius: 12px;
-    border: 1px solid transparent;
+.stat-card {
+    padding: 30px 20px;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    text-align: center;
     transition: var(--transition);
 }
 
-.expertise-card:hover {
+.stat-card:hover {
     border-color: var(--accent);
-    transform: translateY(-3px);
+    transform: translateY(-5px);
 }
 
-.expertise-icon {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 107, 53, 0.1);
-    border-radius: 12px;
+.stat-number {
+    display: block;
+    font-size: 42px;
+    font-weight: 800;
     color: var(--accent);
-    margin-bottom: 16px;
-}
-
-.expertise-card h4 {
-    font-size: 16px;
-    font-weight: 600;
     margin-bottom: 8px;
-    color: var(--text-primary);
+    line-height: 1;
 }
 
-.expertise-card p {
-    font-size: 13px;
+.stat-label {
+    font-size: 14px;
     color: var(--text-muted);
-    line-height: 1.5;
 }
 
 /* ===== Experience Section ===== */
@@ -976,21 +905,17 @@ ul {
         display: none;
     }
 
-    .impact-banner {
-        gap: 30px;
-        padding: 30px 40px;
-    }
-
-    .impact-number {
-        font-size: 36px;
-    }
-
-    .about-content {
+    .about-grid {
         grid-template-columns: 1fr;
+        gap: 40px;
     }
 
-    .expertise-grid {
-        grid-template-columns: 1fr 1fr;
+    .about-text {
+        padding-right: 0;
+    }
+
+    .about-stats {
+        grid-template-columns: repeat(4, 1fr);
     }
 
     .skills-grid {
@@ -1041,32 +966,19 @@ ul {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    .impact-banner {
-        padding: 25px 20px;
-        gap: 20px;
+    .about-lead {
+        font-size: 22px;
     }
 
-    .impact-divider {
-        display: none;
+    .about-stats {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-    .impact-item {
-        flex: 1 1 40%;
-    }
-
-    .impact-number {
+    .stat-number {
         font-size: 32px;
     }
 
-    .impact-label {
-        font-size: 12px;
-    }
-
-    .expertise-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .about-credentials {
+    .about-tags {
         justify-content: center;
     }
 
