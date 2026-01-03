@@ -1,0 +1,84 @@
+baseURL = "https://srynyvas.github.io/Profile/"
+languageCode = "en-us"
+title = "Sreenivas PN | ML Engineer"
+theme = "PaperMod"
+
+[params]
+  author = "Sreenivas PN"
+  description = "Senior Machine Learning Engineer | GenAI Platform Architect"
+  defaultTheme = "dark"
+  ShowToggle = true
+  ShowShareButtons = false
+  ShowReadingTime = false
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  disableSpecial1stPost = true
+  hidemeta = false
+  hideSummary = false
+  showtoc = false
+
+  [params.profileMode]
+    enabled = true
+    title = "Sreenivas PN"
+    subtitle = "Senior Machine Learning Engineer | GenAI & Platform Architecture"
+    imageUrl = "images/profile.jpg"
+    imageWidth = 150
+    imageHeight = 150
+
+    [[params.profileMode.buttons]]
+      name = "About"
+      url = "/about/"
+    [[params.profileMode.buttons]]
+      name = "Experience"
+      url = "/experience/"
+    [[params.profileMode.buttons]]
+      name = "Projects"
+      url = "/projects/"
+
+  [[params.socialIcons]]
+    name = "linkedin"
+    url = "https://in.linkedin.com/in/srynyvas"
+
+  [[params.socialIcons]]
+    name = "github"
+    url = "https://github.com/srynyvas"
+
+  [[params.socialIcons]]
+    name = "email"
+    url = "mailto:sreenivas.workmail@gmail.com"
+
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 1
+  [[menu.main]]
+    identifier = "experience"
+    name = "Experience"
+    url = "/experience/"
+    weight = 2
+  [[menu.main]]
+    identifier = "skills"
+    name = "Skills"
+    url = "/skills/"
+    weight = 3
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 4
+  [[menu.main]]
+    identifier = "education"
+    name = "Education"
+    url = "/education/"
+    weight = 5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    style = "dracula"
+    lineNos = false
