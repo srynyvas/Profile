@@ -55,4 +55,4 @@ Push to `main` branch triggers automatic build and deployment via GitHub Actions
 
 **Sreenivas PN**
 Senior Machine Learning Engineer
-[LinkedIn](https://in.linkedin.com/in/srynyvas) | [Email](mailto:sreenivas.workmail@gmail.com)
+[LinkedIn](https://in.linkedin.com/in/srynyvas) | [Email](mailto:sreenivas.workmail@gmail.co)
