@@ -452,66 +452,33 @@ ul {
 
 /* ===== About Section ===== */
 .about {
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
-.about-wrapper {
-    max-width: 900px;
+.about-items {
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.about-content {
-    background: var(--bg-card);
-    border-radius: 20px;
-    padding: 50px;
-    border: 1px solid var(--border-color);
-}
-
-.about-intro {
-    font-size: 18px;
-    line-height: 1.9;
-    color: var(--text-secondary);
+.about-item {
     margin-bottom: 40px;
-    text-align: center;
 }
 
-.about-details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
+.about-item:last-child {
+    margin-bottom: 0;
 }
 
-.about-column h3 {
-    font-size: 16px;
+.about-item h3 {
+    font-size: 18px;
     font-weight: 600;
-    color: var(--accent);
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    color: var(--text-primary);
+    margin-bottom: 12px;
 }
 
-.about-list {
-    list-style: none;
-}
-
-.about-list li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 14px;
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.about-list li::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 10px;
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
+.about-item p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-muted);
 }
 
 /* ===== Experience Section ===== */
@@ -882,12 +849,8 @@ ul {
         display: none;
     }
 
-    .about-content {
-        padding: 40px 30px;
-    }
-
-    .about-details {
-        gap: 40px;
+    .about-items {
+        padding: 0 20px;
     }
 
     .skills-grid {
@@ -938,18 +901,16 @@ ul {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    .about-content {
-        padding: 30px 20px;
-    }
-
-    .about-intro {
+    .about-item h3 {
         font-size: 16px;
-        text-align: left;
     }
 
-    .about-details {
-        grid-template-columns: 1fr;
-        gap: 30px;
+    .about-item p {
+        font-size: 15px;
+    }
+
+    .about-item {
+        margin-bottom: 30px;
     }
 
     .timeline::before {
