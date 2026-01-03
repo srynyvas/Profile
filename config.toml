@@ -4,10 +4,11 @@ title = "Sreenivas PN | ML Engineer"
 theme = "PaperMod"
 
 [params]
+  env = "production"
   author = "Sreenivas PN"
   description = "Senior Machine Learning Engineer | GenAI Platform Architect"
   defaultTheme = "dark"
-  ShowToggle = true
+  disableThemeToggle = false
   ShowShareButtons = false
   ShowReadingTime = false
   ShowBreadCrumbs = true
@@ -17,6 +18,9 @@ theme = "PaperMod"
   hidemeta = false
   hideSummary = false
   showtoc = false
+
+  [params.assets]
+    disableFingerprinting = true
 
   [params.profileMode]
     enabled = true
