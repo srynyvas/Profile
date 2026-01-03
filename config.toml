@@ -39,6 +39,9 @@ theme = "PaperMod"
     [[params.profileMode.buttons]]
       name = "Projects"
       url = "/projects/"
+    [[params.profileMode.buttons]]
+      name = "Download CV"
+      url = "/resume/Sreenivas_PN_Resume.pdf"
 
   [[params.socialIcons]]
     name = "linkedin"
