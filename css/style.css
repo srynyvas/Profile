@@ -455,9 +455,48 @@ ul {
     background: var(--bg-secondary);
 }
 
+/* Impact Banner */
+.impact-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 60px;
+    background: linear-gradient(135deg, var(--bg-card) 0%, rgba(255, 107, 53, 0.05) 100%);
+    border-radius: 20px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+.impact-item {
+    text-align: center;
+}
+
+.impact-number {
+    display: block;
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+
+.impact-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.impact-divider {
+    width: 1px;
+    height: 60px;
+    background: var(--border-color);
+}
+
 .about-content {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: start;
 }
@@ -466,84 +505,107 @@ ul {
     font-size: 20px;
     line-height: 1.8;
     color: var(--text-secondary);
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
-.about-highlights {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+.about-secondary {
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 30px;
 }
 
-.highlight-item {
+.about-secondary strong {
+    color: var(--text-primary);
+}
+
+/* Credential Badges */
+.about-credentials {
     display: flex;
-    gap: 16px;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.credential-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
     background: var(--bg-card);
-    border-radius: 12px;
     border: 1px solid var(--border-color);
+    border-radius: 30px;
+    font-size: 13px;
+    color: var(--text-secondary);
     transition: var(--transition);
 }
 
-.highlight-item:hover {
+.credential-badge:hover {
     border-color: var(--accent);
-    transform: translateX(8px);
+    color: var(--accent);
 }
 
-.highlight-icon {
-    width: 48px;
-    height: 48px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(255, 107, 53, 0.1);
-    border-radius: 10px;
+.credential-badge svg {
     color: var(--accent);
     flex-shrink: 0;
 }
 
-.highlight-item h4 {
-    font-size: 16px;
+/* Expertise Section */
+.about-expertise {
+    background: var(--bg-card);
+    border-radius: 20px;
+    padding: 30px;
+    border: 1px solid var(--border-color);
+}
+
+.expertise-title {
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 4px;
+    margin-bottom: 24px;
+    color: var(--text-primary);
 }
 
-.highlight-item p {
-    font-size: 14px;
-    color: var(--text-muted);
-}
-
-.about-stats {
+.expertise-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
 
-.stat-card {
-    padding: 30px;
-    background: var(--bg-card);
-    border-radius: 16px;
-    border: 1px solid var(--border-color);
-    text-align: center;
+.expertise-card {
+    padding: 20px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid transparent;
     transition: var(--transition);
 }
 
-.stat-card:hover {
+.expertise-card:hover {
     border-color: var(--accent);
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
-.stat-number {
-    display: block;
-    font-size: 36px;
-    font-weight: 800;
+.expertise-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 107, 53, 0.1);
+    border-radius: 12px;
     color: var(--accent);
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
-.stat-label {
-    font-size: 14px;
+.expertise-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.expertise-card p {
+    font-size: 13px;
     color: var(--text-muted);
+    line-height: 1.5;
 }
 
 /* ===== Experience Section ===== */
@@ -914,12 +976,21 @@ ul {
         display: none;
     }
 
+    .impact-banner {
+        gap: 30px;
+        padding: 30px 40px;
+    }
+
+    .impact-number {
+        font-size: 36px;
+    }
+
     .about-content {
         grid-template-columns: 1fr;
     }
 
-    .about-stats {
-        grid-template-columns: repeat(4, 1fr);
+    .expertise-grid {
+        grid-template-columns: 1fr 1fr;
     }
 
     .skills-grid {
@@ -970,8 +1041,33 @@ ul {
         transform: rotate(-45deg) translate(5px, -5px);
     }
 
-    .about-stats {
-        grid-template-columns: repeat(2, 1fr);
+    .impact-banner {
+        padding: 25px 20px;
+        gap: 20px;
+    }
+
+    .impact-divider {
+        display: none;
+    }
+
+    .impact-item {
+        flex: 1 1 40%;
+    }
+
+    .impact-number {
+        font-size: 32px;
+    }
+
+    .impact-label {
+        font-size: 12px;
+    }
+
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-credentials {
+        justify-content: center;
     }
 
     .timeline::before {
